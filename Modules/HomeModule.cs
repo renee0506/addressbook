@@ -28,6 +28,10 @@ namespace AddressBook
         Contact contactInfo = Contact.FindContact(parameter.id);
         return View["contact_individual.cshtml", contactInfo];
       };
+      Post["/contacts/clear"] = _ => {
+        Contact.ClearAll();
+        return View["contacts_cleared.cshtml"];
+      };
     }
   }
 }

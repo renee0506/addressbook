@@ -1,0 +1,14 @@
+#left {
+  background-image: url(../img/left-background.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#right {
+  background-image:url(../img/right-background.jpg);
+  height:100vh;
+  overflow-y: scroll;
+}

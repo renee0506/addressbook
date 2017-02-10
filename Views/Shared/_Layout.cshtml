@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="/Content/css/styles.css">
   </head>
   <body>
-    @RenderBody()
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4" id="left">
+          <h1>Address Book</h1>
+        </div>
+        <div class="col-md-8" id="right">
+          @RenderBody()
+        </div>
+      </div>
+    </div>
   </body>
 </html>

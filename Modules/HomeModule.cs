@@ -29,7 +29,6 @@ namespace AddressBook
         Contact newContact = new Contact(newName, newPhone, newAddress);
         model.Add("address", newAddress);
         model.Add("contact", newContact);
-        Console.WriteLine(model);
         return View["contact_new.cshtml", model];
       };
       Get["/contact/{id}/info"] = parameter => {
@@ -50,7 +49,7 @@ namespace AddressBook
         if (Contact.GetAll() != null){
           allContacts = Contact.GetAll();
         }
-        return View["index.cshtml", allContacts];
+        return View["contact_deleted.cshtml", allContacts];
       };
     }
   }

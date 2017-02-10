@@ -21,6 +21,7 @@ label {
   margin:5%;
   border:solid 20px salmon;
   border-radius:20px;
+}
 
 #left {
   background-image: url(../img/left-background.jpg);

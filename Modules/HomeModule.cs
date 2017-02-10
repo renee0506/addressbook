@@ -51,6 +51,11 @@ namespace AddressBook
         }
         return View["contact_deleted.cshtml", allContacts];
       };
+      Get["/contacts_search"] = _ => {
+        string input = Request.Query["search-input"];
+        List<Contact> Results = Contact.SearchContactByName(input);
+        return View["contacts_search.cshtml", Results];
+      };
     }
   }
 }

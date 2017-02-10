@@ -85,5 +85,17 @@ namespace AddressBook.Objects
         person.SetId(_contacts.IndexOf(person)+1);
       }
     }
+
+    public static List<Contact> SearchContactByName(string input)
+    {
+      List<Contact> Results = new List<Contact>{};
+      foreach (Contact person in _contacts)
+      {
+         if (person.GetName().ToLower().Contains(input.ToLower())){
+           Results.Add(person);
+         }
+      }
+      return Results;
+    }
   }
 }

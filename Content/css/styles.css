@@ -1,21 +1,35 @@
 body {
   font-family: 'Rancho', cursive;
   font-size:20px;
+  background-image: url(../img/body-background.jpg);
+}
+
+.btn {
+  font-size:20px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.container {
+  margin:5%;
 }
 
 #left {
   background-image: url(../img/left-background.jpg);
   background-size:cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 75vh;
   text-align: center;
-  padding-top: 40vh;
+  padding-top: 25vh;
 }
 
 #right {
-  background-image:url(../img/right-background.png);
-  height:100vh;
+  background-image:url(../img/right-background.jpg);
+  height:75vh;
   overflow-y: scroll;
+  padding-left: 5%;
 }
 
 .btn {

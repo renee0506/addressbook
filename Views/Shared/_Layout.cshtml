@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="/Content/css/styles.css">
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <div class="col-md-4" id="left">
-          <h1>Address Book</h1>
+        <div class="col-md-6" id="left">
+          <h1 class="bigger">Address Book</h1>
           <form action="/contacts_search">
             <input type="text" name="search-input" id="search-input">
             <button type="submit">Search Name</button>
@@ -21,7 +21,7 @@
             <button type="submit" class = "btn btn-danger">Clear All Contacts</button>
           </form>
         </div>
-        <div class="col-md-8" id="right">
+        <div class="col-md-6" id="right">
           @RenderBody()
         </div>
       </div>

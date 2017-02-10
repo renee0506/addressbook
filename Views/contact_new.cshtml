@@ -2,8 +2,9 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h1>You added a new contact! @Model["contact"].GetName()</h1>
-<ul>
+<h1>You added a new contact! </h1>
+<h1>@Model["contact"].GetName()</h1>
+<ul
   <li>Phone: @Model["contact"].GetPhone()</li>
   <li>Address: @Model["address"].GetStreet(), @Model["address"].GetCity(), @Model["address"].GetState(), @Model["address"].GetZipcode()</li>
 </ul>

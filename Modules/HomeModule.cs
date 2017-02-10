@@ -18,15 +18,27 @@ namespace AddressBook
       };
       Get["/contact_add_form"] = _ => View["contact_add_form.cshtml"];
       Post["/contact/new"] = _ =>{
+        Dictionary<string, object> model = new Dictionary<string, object>();
         string newName = Request.Form["new-name"];
         string newPhone = Request.Form["new-phone"];
-        string newAddress = Request.Form["new-address"];
+        string newStreet = Request.Form["new-street"];
+        string newCity = Request.Form["new-city"];
+        string newState = Request.Form["new-state"];
+        int newZip = Request.Form["new-zipcode"];
+        Address newAddress = new Address(newStreet, newCity, newState, newZip);
         Contact newContact = new Contact(newName, newPhone, newAddress);
-        return View["contact_new.cshtml", newContact];
+        model.Add("address", newAddress);
+        model.Add("contact", newContact);
+        Console.WriteLine(model);
+        return View["contact_new.cshtml", model];
       };
       Get["/contact/{id}/info"] = parameter => {
         Contact contactInfo = Contact.FindContact(parameter.id);
-        return View["contact_individual.cshtml", contactInfo];
+        Address addressInfo = contactInfo.GetAddress();
+        Dictionary<string, object> model = new Dictionary<string, object>();
+        model.Add("address", addressInfo);
+        model.Add("contact", contactInfo);
+        return View["contact_individual.cshtml", model];
       };
       Post["/contacts/clear"] = _ => {
         Contact.ClearAll();

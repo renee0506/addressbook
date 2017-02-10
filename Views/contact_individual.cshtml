@@ -2,12 +2,12 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h1>@Model.GetName()</h1>
+<h1>@Model["contact"].GetName()</h1>
 <ul>
-  <li>Phone: @Model.GetPhone()</li>
-  <li>Address: @Model.GetAddress()</li>
+  <li>Phone: @Model["contact"].GetPhone()</li>
+  <li>Address: @Model["address"].GetStreet(), @Model["address"].GetCity(), @Model["address"].GetState(), @Model["address"].GetZipcode()</li>
 </ul>
-<form action="/contacts/@Model.GetId()/deleted" method="post">
+<form action="/contacts/@Model["contact"].GetId()/deleted" method="post">
   <button type="submit" class="btn">Delete</button>
 </form>
 <p><a href="/">Back to Index</a></p>

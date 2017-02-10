@@ -7,12 +7,12 @@ namespace AddressBook.Objects
   {
     private string _name;
     private string _phone;
-    private string _address;
+    private Address _address;
     private int _id;
 
     private static List<Contact> _contacts = new List<Contact>{};
 
-    public Contact(string name, string phone, string address)
+    public Contact(string name, string phone, Address address)
     {
       _name = name;
       _phone = phone;
@@ -41,12 +41,12 @@ namespace AddressBook.Objects
       _phone = newPhone;
     }
 
-    public string GetAddress()
+    public Address GetAddress()
     {
       return _address;
     }
 
-    public void SetAddress(string newAddress)
+    public void SetAddress(Address newAddress)
     {
       _address = newAddress;
     }
@@ -79,6 +79,7 @@ namespace AddressBook.Objects
     public static void RemoveContact(int searchId)
     {
       _contacts.RemoveAt(searchId-1);
+      //reset id
       foreach (Contact person in _contacts)
       {
         person.SetId(_contacts.IndexOf(person)+1);

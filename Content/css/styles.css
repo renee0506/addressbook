@@ -1,3 +1,8 @@
+body {
+  font-family: 'Rancho', cursive;
+  font-size:20px;
+}
+
 #left {
   background-image: url(../img/left-background.jpg);
   background-size:cover;
@@ -8,7 +13,11 @@
 }
 
 #right {
-  background-image:url(../img/right-background.jpg);
+  background-image:url(../img/right-background.png);
   height:100vh;
   overflow-y: scroll;
+}
+
+.btn {
+  margin-top: 2%;
 }

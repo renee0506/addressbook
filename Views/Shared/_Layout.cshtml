@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>AddressBook</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
     <link rel="stylesheet" href="/Content/css/styles.css">
   </head>
   <body>
@@ -11,6 +12,10 @@
       <div class="row">
         <div class="col-md-4" id="left">
           <h1>Address Book</h1>
+          <a href="/contact_add_form"><button type="button" class = "btn btn-primary">Add a New Contact</button></a>
+          <form action="/contacts/clear" method="post">
+            <button type="submit" class = "btn btn-danger">Clear All Contacts</button>
+          </form>
         </div>
         <div class="col-md-8" id="right">
           @RenderBody()

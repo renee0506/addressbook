@@ -3,12 +3,12 @@
 }
 
 <h1>Create New Contact</h1>
-<form action="/contact/new" method="post">
+<form action="/contact/new" method="post" class="form-group">
   <label for="new-name">Name:</label>
-  <input type="text" name="new-name" id="new-name">
+  <input type="text" name="new-name" id="new-name" class="form-control">
   <label for="new-phone">Phone No.:</label>
-  <input type="text" name="new-phone" id="new-phone">
+  <input type="number" name="new-phone" id="new-phone" class="form-control">
   <label for="new-address">Address:</label>
-  <input type="text" name="new-address" id="new-address">
-  <button type="submit">Add</button>
+  <input type="text" name="new-address" id="new-address" class="form-control">
+  <button type="submit" class="btn btn-primary">Add</button>
 </form>

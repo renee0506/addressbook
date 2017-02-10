@@ -12,6 +12,11 @@ h1 {
   font-size: 60px;
 }
 
+label {
+  font-weight: normal;
+  line-height: normal;
+}
+
 .container {
   margin:5%;
   border:solid 20px salmon;

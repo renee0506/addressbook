@@ -2,19 +2,35 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h1>Create New Contact</h1>
+<h1 id="form">Create New Contact</h1>
 <form action="/contact/new" method="post" class="form-group">
-  <label for="new-name">Name:</label>
-  <input type="text" name="new-name" id="new-name" class="form-control">
+  <div class="row">
+    <div class="col-md-6">
+      <label for="new-first-name">First Name:</label>
+      <input type="text" name="new-first-name" id="new-first-name" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label for="new-last-name">Last Name:</label>
+      <input type="text" name="new-last-name" id="new-last-name" class="form-control">
+    </div>    
+  </div>
   <label for="new-phone">Phone No.:</label>
-  <input type="number" name="new-phone" id="new-phone" class="form-control">
+  <input type="text" name="new-phone" id="new-phone" class="form-control">
   <label for="new-street">Street:</label>
   <input type="text" name="new-street" id="new-street" class="form-control">
-  <label for="new-city">City:</label>
-  <input type="text" name="new-city" id="new-city" class="form-control">
-  <label for="new-state">State:</label>
-  <input type="text" name="new-state" id="new-state" class="form-control">
-  <label for="new-zipcode">State:</label>
-  <input type="text" name="new-zipcode" id="new-zipcode" class="form-control">
+  <div class="row">
+    <div class="col-md-4">
+      <label for="new-city">City:</label>
+      <input type="text" name="new-city" id="new-city" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label for="new-state">State:</label>
+      <input type="text" name="new-state" id="new-state" class="form-control">
+    </div>
+    <div class="col-md-4">
+      <label for="new-zipcode">Zipcode:</label>
+      <input type="text" name="new-zipcode" id="new-zipcode" class="form-control">
+    </div>
+  </div>
   <button type="submit" class="btn btn-primary">Add</button>
 </form>

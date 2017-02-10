@@ -19,7 +19,7 @@ namespace AddressBook
       Get["/contact_add_form"] = _ => View["contact_add_form.cshtml"];
       Post["/contact/new"] = _ =>{
         Dictionary<string, object> model = new Dictionary<string, object>();
-        string newName = Request.Form["new-name"];
+        string newName = Request.Form["new-first-name"] + " " + Request.Form["new-last-name"];
         string newPhone = Request.Form["new-phone"];
         string newStreet = Request.Form["new-street"];
         string newCity = Request.Form["new-city"];

@@ -6,7 +6,7 @@
 
 ## Description
 
-_The project is a C# based address book web application with Nancy. The site allows to add new contacts to your existing address book, delete contacts, search contact by name and clear the entire address book. [Click here](https://renee0506.github.io/contact) to access the site._
+_The project is a C# based address book web application with Nancy. The site allows to add new contacts to your existing address book, delete contacts, search contact by name and clear the entire address book. [Click here](https://renee0506.github.io/addressbook) to access the site._
 
 ## Instructions
 

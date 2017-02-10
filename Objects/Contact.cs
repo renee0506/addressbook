@@ -56,6 +56,11 @@ namespace AddressBook.Objects
       return _id;
     }
 
+    public void SetId(int newId)
+    {
+      _id = newId;
+    }
+
     public static List<Contact> GetAll()
     {
       return _contacts;
@@ -66,11 +71,18 @@ namespace AddressBook.Objects
       _contacts.Clear();
     }
 
-    public static Contact FindContact(int SearchId)
+    public static Contact FindContact(int searchId)
     {
-      Console.WriteLine(SearchId);
-      Console.WriteLine(_contacts);
-      return _contacts[SearchId-1];
+      return _contacts[searchId-1];
+    }
+
+    public static void RemoveContact(int searchId)
+    {
+      _contacts.RemoveAt(searchId-1);
+      foreach (Contact person in _contacts)
+      {
+        person.SetId(_contacts.IndexOf(person)+1);
+      }
     }
   }
 }

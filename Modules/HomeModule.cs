@@ -32,6 +32,14 @@ namespace AddressBook
         Contact.ClearAll();
         return View["contacts_cleared.cshtml"];
       };
+      Post["/contacts/{id}/deleted"] = parameter => {
+        Contact.RemoveContact(parameter.id);
+        List<Contact> allContacts = new List<Contact>{};
+        if (Contact.GetAll() != null){
+          allContacts = Contact.GetAll();
+        }
+        return View["index.cshtml", allContacts];
+      };
     }
   }
 }

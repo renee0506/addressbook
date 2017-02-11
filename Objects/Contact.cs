@@ -97,5 +97,18 @@ namespace AddressBook.Objects
       }
       return Results;
     }
+
+    // public static List<Contact> SearchContactByFirst(string letter)
+    // {
+    //   List<Contact> Results = new List<Contact>{};
+    //   foreach (Contact person in _contacts)
+    //   {
+    //     string name = person.GetName().ToUpper();
+    //      if (name.ToCharArray()[0] == letter){
+    //        Results.Add(person);
+    //      }
+    //   }
+    //   return Results;
+    // }
   }
 }

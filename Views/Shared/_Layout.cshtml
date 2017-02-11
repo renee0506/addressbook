@@ -21,8 +21,14 @@
             <button type="submit" class = "btn btn-danger">Clear All Contacts</button>
           </form>
         </div>
-        <div class="col-md-6" id="right">
+        <div class="col-md-5" id="right">
           @RenderBody()
+        </div>
+        <div class="col-md-1">
+          @{char[] alphabet = new char[]{'A', 'B', 'C', 'D'};}
+          @foreach(char letter in alphabet){
+            <p><a href="search/@letter">@letter</a></p>
+          }
         </div>
       </div>
     </div>

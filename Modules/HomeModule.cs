@@ -56,6 +56,11 @@ namespace AddressBook
         List<Contact> Results = Contact.SearchContactByName(input);
         return View["contacts_search.cshtml", Results];
       };
+      Get["/search/{letter}"] = parameter => {
+        Console.WriteLine(parameter.letter);
+        // List<Contact> Results = Contact.SearchContactByFirst(parameter.letter);
+        return View["index.cshtml"];
+      };
     }
   }
 }
